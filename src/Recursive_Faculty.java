@@ -1,9 +1,10 @@
-import jdk.jfr.Unsigned;
+
 
 public class Recursive_Faculty {
 
     public static void main(String[] args) {
 
+        // input
         int val;
 
         /*
@@ -58,6 +59,7 @@ public class Recursive_Faculty {
 
     }
 
+    // this procedure is responsible for validating if the input is not invalid/un-usable
     public static void Validator(int number) {
 
         if (number < 0) {
@@ -66,16 +68,19 @@ public class Recursive_Faculty {
 
         } else {
 
+            // Calls functions and prints it
             System.out.println(Faculty(number));
 
         }
 
     }
 
+    // this function is responsible for calculating the faculty
     public static int Faculty(int number) {
 
         if (!(number <= 0)) {
 
+            // the function calls itself until the number reaches 0
             return Faculty(number - 1) * number;
 
         } else {
